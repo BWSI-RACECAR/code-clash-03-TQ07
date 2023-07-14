@@ -40,8 +40,8 @@ Input: center= 720, tuples(x, y) = (1440, 900)  Output: 0.000000
 
 class Solution:    
     def propcontrol(self, center, res):
-        old_min = res[0]
-        old_max = res[1]
+        old_min = 0
+        old_max = res[0]
            
 
         def remap_range(
@@ -68,7 +68,8 @@ class Solution:
             # TODO: remap val to the new range
             return new_min + (val - old_min) * (new_max - new_min) / (old_max - old_min)
         return remap_range(center, old_min,old_max, -1 , 1)
-
+        
+        
         
 
 def main():
