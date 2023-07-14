@@ -43,7 +43,31 @@ class Solution:
         old_min = res[0]
         old_max = res[1]
            
-        return round(-1 + (center - old_min) * (1  +1) / (old_max - old_min),6)
+
+        def remap_range(
+            val: float,
+            old_min: float,
+            old_max: float,
+            new_min: float,
+            new_max: float,
+        ) -> float:
+            """
+            Remaps a value from one range to another range.
+
+            Args:
+                val: A number form the old range to be rescaled.
+                old_min: The inclusive 'lower' bound of the old range.
+                old_max: The inclusive 'upper' bound of the old range.
+                new_min: The inclusive 'lower' bound of the new range.
+                new_max: The inclusive 'upper' bound of the new range.
+
+            Note:
+                min need not be less than max; flipping the direction will cause the sign of
+                the mapping to flip.  val does not have to be between old_min and old_max.
+            """
+            # TODO: remap val to the new range
+            return new_min + (val - old_min) * (new_max - new_min) / (old_max - old_min)
+        return remap_range(center, old_min,old_max, -1 , 1)
 
         
 
