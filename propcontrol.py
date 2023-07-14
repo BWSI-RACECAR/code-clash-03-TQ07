@@ -40,8 +40,10 @@ Input: center= 720, tuples(x, y) = (1440, 900)  Output: 0.000000
 
 class Solution:    
     def propcontrol(self, center, res):
+        old_min = res[0]
+        old_max = res[1]
            
-        return -1 + (center - 0) * (1 +1 ) / (res - 0)
+        return -1 + (center - old_min) * (1  +1) / (old_max - old_min)
 
         
 
