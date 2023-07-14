@@ -43,7 +43,7 @@ class Solution:
         old_min = res[0]
         old_max = res[1]
            
-        return -1 + (center - old_min) * (1  +1) / (old_max - old_min)
+        return round(-1 + (center - old_min) * (1  +1) / (old_max - old_min),6)
 
         
 
